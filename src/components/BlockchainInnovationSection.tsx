@@ -3,69 +3,40 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const codeSnippet = `// Smart Contract for Secure Logistics Tracking
-pragma solidity ^0.8.0;
-
-contract SecureLogistics {
-    struct Shipment {
-        uint256 id;
-        address sender;
-        address recipient;
-        string status;
-        uint256 timestamp;
-        bytes32 documentHash;
-    }
-    
-    mapping(uint256 => Shipment) public shipments;
-    
-    event ShipmentUpdated(
-        uint256 indexed id,
-        string status,
-        uint256 timestamp
-    );
-    
-    function updateShipment(
-        uint256 _id, 
-        string memory _status,
-        bytes32 _documentHash
-    ) public {
-        // Verification and security checks
-        require(msg.sender == shipments[_id].sender, "Unauthorized");
-        
-        shipments[_id].status = _status;
-        shipments[_id].timestamp = block.timestamp;
-        shipments[_id].documentHash = _documentHash;
-        
-        emit ShipmentUpdated(_id, _status, block.timestamp);
-    }
+const codeSnippet = `// Example AI Model for Predictive Maintenance
+async function predictMaintenance(sensorData) {
+  const model = await tf.loadLayersModel('model.json');
+  const input = tf.tensor2d(sensorData, [1, sensorData.length]);
+  const prediction = model.predict(input);
+  return prediction.dataSync()[0];
 }`;
 
-const securityProtocols = [
+const aiFeatures = [
   {
-    name: "Multi-Signature Authentication",
-    description: "Requires multiple authorized parties to approve transactions, enhancing security for high-value operations."
+    name: "Predictive Maintenance",
+    description: "Utilizes machine learning to predict equipment failures before they occur, minimizing downtime."
   },
   {
-    name: "Zero-Knowledge Proofs",
-    description: "Enables verification without revealing sensitive data, perfect for confidential government contracts."
+    name: "Intelligent Automation",
+    description: "Automates complex decision-making processes, improving efficiency and reducing human error."
   },
   {
-    name: "Immutable Audit Trails",
-    description: "Creates tamper-proof records of all supply chain events, ensuring compliance and transparency."
+    name: "Natural Language Processing",
+    description: "Enables advanced human-computer interaction, facilitating seamless communication and data analysis."
   },
   {
-    name: "Hardware Security Modules",
-    description: "Specialized hardware for secure key management and cryptographic operations."
+    name: "Computer Vision",
+    description: "Allows systems to 'see' and interpret images, enabling applications like automated quality control."
   }
 ];
 
-export function BlockchainInnovationSection() {
-  const [activeProtocol, setActiveProtocol] = useState(0);
+export function AIInnovationSection() {
+  const [activeFeature, setActiveFeature] = useState(0);
 
   return (
     <section id="technology" className="py-16 px-4 md:px-6 lg:px-8 bg-gradient-to-b from-white to-neutral-light dark:from-gray-900 dark:to-primary/30">
       <div className="max-w-7xl mx-auto">
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,10 +44,10 @@ export function BlockchainInnovationSection() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tight text-primary dark:text-white sm:text-4xl">
-            Blockchain Innovation
+            AI Innovation
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Our cutting-edge technology stack delivers secure, scalable blockchain solutions
+            Our cutting-edge technology stack delivers intelligent, AI-powered solutions for a smarter future.
           </p>
         </motion.div>
 
@@ -88,34 +59,34 @@ export function BlockchainInnovationSection() {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold text-primary dark:text-white">Enterprise-Grade Technology</h3>
+            <h3 className="text-2xl font-bold text-primary dark:text-white">Enterprise-Grade AI</h3>
             <p className="text-gray-700 dark:text-gray-300">
-              Rockfin's blockchain infrastructure combines the security of distributed ledger technology with the performance demands of enterprise applications. Our solutions are built on proven blockchain protocols and enhanced with proprietary optimizations for government and enterprise use cases.
+              Rockfin's AI infrastructure combines the power of machine learning with the performance demands of enterprise applications. Our solutions are built on proven AI models and enhanced with proprietary optimizations for government and enterprise use cases.
             </p>
             
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-primary dark:text-white">Security Protocols</h4>
+              <h4 className="text-xl font-semibold text-primary dark:text-white">AI Features</h4>
               <div className="space-y-2">
-                {securityProtocols.map((protocol, index) => (
+                {aiFeatures.map((feature, index) => (
                   <motion.div
                     key={index}
                     className={`p-4 rounded-lg cursor-pointer transition-all ${
-                      activeProtocol === index 
-                        ? 'bg-secondary/10 border-l-4 border-secondary' 
+                      activeFeature === index
+                        ? 'bg-secondary/10 border-l-4 border-secondary'
                         : 'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700'
                     }`}
-                    onClick={() => setActiveProtocol(index)}
+                    onClick={() => setActiveFeature(index)}
                     whileHover={{ x: 5 }}
                   >
-                    <h5 className="font-medium text-primary dark:text-white">{protocol.name}</h5>
-                    {activeProtocol === index && (
-                      <motion.p 
+                    <h5 className="font-medium text-primary dark:text-white">{feature.name}</h5>
+                    {activeFeature === index && (
+                      <motion.p
                         className="mt-2 text-gray-600 dark:text-gray-300 text-sm"
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         transition={{ duration: 0.3 }}
                       >
-                        {protocol.description}
+                        {feature.description}
                       </motion.p>
                     )}
                   </motion.div>
@@ -136,10 +107,10 @@ export function BlockchainInnovationSection() {
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                <div className="ml-2 text-gray-400 text-sm">Smart Contract Example</div>
+                <div className="ml-2 text-gray-400 text-sm">AI Model Example</div>
               </div>
               <pre className="p-4 overflow-x-auto text-sm">
-                <code className="language-solidity text-green-400">
+                <code className="language-javascript text-green-400">
                   {codeSnippet}
                 </code>
               </pre>
@@ -154,7 +125,7 @@ export function BlockchainInnovationSection() {
           transition={{ duration: 0.5 }}
           className="relative bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 overflow-hidden"
         >
-          <h3 className="text-xl font-bold text-primary dark:text-white mb-6 text-center">Blockchain-Powered Logistics Flow</h3>
+          <h3 className="text-xl font-bold text-primary dark:text-white mb-6 text-center">AI-Powered Data Flow</h3>
           
           <div className="relative">
             {/* Flow Diagram */}
@@ -163,7 +134,7 @@ export function BlockchainInnovationSection() {
               <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent transform -translate-y-1/2 z-0"></div>
               
               {/* Flow Steps */}
-              {['Data Collection', 'Blockchain Verification', 'Smart Contract Execution', 'Secure Distribution'].map((step, index) => (
+              {['Data Input', 'AI Processing', 'Model Prediction', 'Actionable Insights'].map((step, index) => (
                 <motion.div
                   key={index}
                   className="relative z-10 flex flex-col items-center text-center mb-8 md:mb-0 w-full md:w-1/4"
@@ -176,13 +147,13 @@ export function BlockchainInnovationSection() {
                     {index + 1}
                   </div>
                   <h4 className="text-lg font-semibold text-primary dark:text-white mb-2">{step}</h4>
-                  <motion.div 
+                  <motion.div
                     className="w-2 h-8 bg-accent hidden md:block absolute -bottom-8"
-                    animate={{ 
+                    animate={{
                       height: [8, 16, 8],
                       opacity: [0.5, 1, 0.5]
                     }}
-                    transition={{ 
+                    transition={{
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",

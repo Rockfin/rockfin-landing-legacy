@@ -19,7 +19,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.header 
+    <motion.header
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white/90 dark:bg-primary/90 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'
       }`}
@@ -29,30 +29,30 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-primary dark:text-white">Rockfin<span className="text-secondary">LLC</span></span>
+          <Image src="/Rockfin_logo_white.svg" alt="Rockfin LLC Logo" width={150} height={50} />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8">
           {['Services', 'Government Contracting', 'Technology', 'About', 'Contact'].map((item) => (
-            <Link 
-              key={item} 
+            <Link
+              key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
               className="font-medium text-neutral-dark dark:text-white hover:text-secondary dark:hover:text-accent transition-colors"
             >
               {item}
             </Link>
           ))}
-          <Link 
-            href="#consultation" 
+          <Link
+            href="#consultation"
             className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-md font-medium transition-colors"
           >
             Schedule Consultation
           </Link>
-        </nav>
+        </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-neutral-dark dark:text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -70,7 +70,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <motion.div 
+        <motion.div
           className="md:hidden bg-white dark:bg-primary shadow-lg"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
@@ -79,8 +79,8 @@ const Navbar = () => {
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {['Services', 'Government Contracting', 'Technology', 'About', 'Contact'].map((item) => (
-              <Link 
-                key={item} 
+              <Link
+                key={item}
                 href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
                 className="font-medium text-neutral-dark dark:text-white hover:text-secondary dark:hover:text-accent transition-colors py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -88,8 +88,8 @@ const Navbar = () => {
                 {item}
               </Link>
             ))}
-            <Link 
-              href="#consultation" 
+            <Link
+              href="#consultation"
               className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-md font-medium transition-colors text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >

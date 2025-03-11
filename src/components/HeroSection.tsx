@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-primary opacity-90"></div>
@@ -49,19 +49,19 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Bridging Blockchain Innovation with Government Contracting
+            Driving AI Innovation in Government Contracting
           </motion.h1>
           
-          <motion.p 
+          <motion.p
             className="text-xl md:text-2xl text-white/90 mb-8 font-body"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Rockfin LLC delivers enterprise-grade web3 infrastructure, strategic crypto investments, and secure logistics solutions
+            Rockfin LLC delivers enterprise-grade AI infrastructure, strategic technology investments, and secure data-driven solutions.
           </motion.p>
           
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

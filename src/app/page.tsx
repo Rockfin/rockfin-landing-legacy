@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { GovernmentContractingSection } from "@/components/GovernmentContractingSection";
-import { BlockchainInnovationSection } from "@/components/BlockchainInnovationSection";
+import { AIInnovationSection } from "@/components/BlockchainInnovationSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -19,7 +19,7 @@ export default function Home() {
           <HeroSection />
           <ServicesSection />
           <GovernmentContractingSection />
-          <BlockchainInnovationSection />
+          <AIInnovationSection />
           <ContactSection />
         </Suspense>
       </main>

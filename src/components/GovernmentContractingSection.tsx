@@ -108,7 +108,7 @@ export function GovernmentContractingSection() {
             </div>
 
             <p className="text-gray-700 dark:text-gray-300">
-              Rockfin LLC brings blockchain innovation to government contracting with a focus on security, compliance, and transparency. Our approach combines cutting-edge technology with a deep understanding of federal procurement requirements, ensuring solutions that meet the highest standards of both innovation and regulatory compliance.
+              Rockfin LLC brings AI-driven innovation to government contracting with a focus on security, compliance, and transparency. Our approach combines cutting-edge technology with a deep understanding of federal procurement requirements, ensuring solutions that meet the highest standards of both innovation and regulatory compliance.
             </p>
 
             <div className="space-y-2">
@@ -133,38 +133,7 @@ export function GovernmentContractingSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative h-80 md:h-96 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg overflow-hidden"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full opacity-10">
-                <path fill="#2A7DE1" d="M45.7,-76.9C58.9,-69.2,69.3,-56.3,76.4,-42.1C83.5,-27.9,87.3,-13.9,87.6,0.2C87.9,14.3,84.7,28.6,77.5,41.1C70.3,53.6,59.1,64.3,45.9,70.9C32.7,77.5,16.4,80,0.7,78.9C-14.9,77.8,-29.9,73.1,-43.1,65.6C-56.4,58.1,-68,47.9,-75.7,35C-83.4,22.1,-87.3,6.5,-85.7,-8.2C-84.1,-22.9,-77,-36.7,-67.1,-47.4C-57.2,-58.1,-44.5,-65.7,-31.4,-73.2C-18.2,-80.7,-4.6,-88.2,9.2,-87.7C23,-87.3,45.9,-79,45.7,-76.9Z" transform="translate(100 100)" />
-              </svg>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="grid grid-cols-3 gap-4 p-4 w-full max-w-md">
-                  <div className="col-span-3 text-center mb-4">
-                    <h3 className="text-xl font-bold text-primary dark:text-white">Secure Supply Chain</h3>
-                  </div>
-                  {[1, 2, 3, 4, 5, 6].map((node) => (
-                    <motion.div
-                      key={node}
-                      className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-2 flex items-center justify-center"
-                      initial={{ scale: 0.8, opacity: 0 }}
-                      whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ 
-                        duration: 0.5, 
-                        delay: 0.1 * node,
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        repeatDelay: 2 + (node * 0.5)
-                      }}
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6 text-secondary">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                      </svg>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
+           
           </motion.div>
         </div>
 
