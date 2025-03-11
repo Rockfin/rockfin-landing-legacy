@@ -61,7 +61,7 @@ export function AIInnovationSection() {
           >
             <h3 className="text-2xl font-bold text-primary dark:text-white">Enterprise-Grade AI</h3>
             <p className="text-gray-700 dark:text-gray-300">
-              Rockfin's AI infrastructure combines the power of machine learning with the performance demands of enterprise applications. Our solutions are built on proven AI models and enhanced with proprietary optimizations for government and enterprise use cases.
+              Rockfin&apos;s AI infrastructure combines the power of machine learning with the performance demands of enterprise applications. Our solutions are built on proven AI models and enhanced with proprietary optimizations for government and enterprise use cases.
             </p>
             
             <div className="space-y-4">

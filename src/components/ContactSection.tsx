@@ -63,7 +63,7 @@ export function ContactSection() {
             Schedule a Consultation
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Let's discuss how Rockfin LLC can help your organization leverage blockchain technology
+            Let&apos;s discuss how Rockfin LLC can help your organization leverage blockchain technology
           </p>
         </motion.div>
 

@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
-import Image from 'next/image';
 
 interface StatisticProps {
   value: number;
