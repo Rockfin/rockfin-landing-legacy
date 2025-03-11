@@ -8,6 +8,7 @@ import { GovernmentContractingSection } from "@/components/GovernmentContracting
 import { AIInnovationSection } from "@/components/BlockchainInnovationSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+import Spline from '@splinetool/react-spline/next';
 
 export default function Home() {
   return (
@@ -17,6 +18,11 @@ export default function Home() {
       <main>
         <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
           <HeroSection />
+          <div style={{ width: '100vw', height: '100vh' }}>
+            <Spline
+              scene="https://prod.spline.design/Nl5oejRR2NptS4Vp/scene.splinecode"
+            />
+          </div>
           <ServicesSection />
           <GovernmentContractingSection />
           <AIInnovationSection />
