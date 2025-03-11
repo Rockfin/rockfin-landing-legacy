@@ -63,7 +63,7 @@ export function ContactSection() {
             Schedule a Consultation
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Let&apos;s discuss how Rockfin LLC can help your organization leverage blockchain technology
+            Let&apos;s discuss how Rockfin.io can help your organization leverage blockchain technology
           </p>
         </motion.div>
 
@@ -235,7 +235,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-md font-medium text-gray-900 dark:text-white">Email</h4>
-                    <p className="text-gray-600 dark:text-gray-300">contact@rockfinllc.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">contact@rockfin.io</p>
                   </div>
                 </div>
                 

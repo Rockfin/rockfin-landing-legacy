@@ -16,17 +16,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rockfin LLC | Web3 Infrastructure & Government Contracting",
-  description: "Rockfin LLC delivers enterprise-grade web3 infrastructure, strategic crypto investments, and secure logistics solutions for government and private entities.",
+  title: "Rockfin.io | Web3 Infrastructure & Government Contracting",
+  description: "Rockfin.io delivers enterprise-grade web3 infrastructure, strategic crypto investments, and secure logistics solutions for government and private entities.",
   keywords: ["web3", "blockchain", "cryptocurrency", "government contracting", "logistics", "infrastructure"],
-  authors: [{ name: "Rockfin LLC" }],
+  authors: [{ name: "Rockfin.io" }],
+  icons: {
+    icon: "/Rockfin.svg",
+    apple: "/Rockfin.svg",
+  },
   openGraph: {
-    title: "Rockfin LLC | Web3 Infrastructure & Government Contracting",
+    title: "Rockfin.io | Web3 Infrastructure & Government Contracting",
     description: "Enterprise-grade web3 infrastructure, strategic crypto investments, and secure logistics solutions.",
-    url: "https://rockfinllc.com",
-    siteName: "Rockfin LLC",
+    url: "https://rockfin.io",
+    siteName: "Rockfin.io",
     locale: "en_US",
     type: "website",
+    images: [{
+      url: "/Rockfin.svg",
+      width: 800,
+      height: 600,
+      alt: "Rockfin.io Logo"
+    }],
   },
 };
 

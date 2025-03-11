@@ -33,7 +33,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           {['Services', 'Government Contracting', 'Technology', 'About', 'Contact'].map((item) => (
             <Link
               key={item}
