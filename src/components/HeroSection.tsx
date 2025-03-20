@@ -2,44 +2,31 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+// Importing the regular Spline component without /next
+const SplineComponent = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full bg-primary/90"></div>
+  )
+});
+
+// Simple wrapper to handle the Spline component
+const SplineWrapper = ({ sceneUrl }: { sceneUrl: string }) => (
+  <div className="absolute inset-0 z-0">
+    <SplineComponent scene={sceneUrl} />
+  </div>
+);
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-primary opacity-90"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/40"></div>
-        
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-10"></div>
-        
-        {/* Animated Particles */}
-        <div className="absolute inset-0">
-          {Array.from({ length: 20 }).map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute rounded-full bg-white/20"
-              style={{
-                width: Math.random() * 10 + 5,
-                height: Math.random() * 10 + 5,
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, Math.random() * 100 - 50],
-                x: [0, Math.random() * 100 - 50],
-                opacity: [0.1, 0.5, 0.1],
-              }}
-              transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
-          ))}
-        </div>
-      </div>
+      {/* Spline Background */}
+      <SplineWrapper sceneUrl="https://prod.spline.design/eNgMV8ubeYFtIbiB/scene.splinecode" />
+      
+      {/* Semi-transparent overlay for better text visibility */}
+      <div className="absolute inset-0 bg-black/40 z-[1]"></div>
 
       <div className="container mx-auto px-4 z-10 py-20">
         <div className="max-w-4xl">
