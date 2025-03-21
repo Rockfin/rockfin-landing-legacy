@@ -2,22 +2,40 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-// Importing the regular Spline component without /next
-const SplineComponent = dynamic(() => import('@splinetool/react-spline'), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full bg-primary/90"></div>
-  )
-});
+import { Application } from '@splinetool/runtime';
+import React from 'react';
 
 // Simple wrapper to handle the Spline component
-const SplineWrapper = ({ sceneUrl }: { sceneUrl: string }) => (
-  <div className="absolute inset-0 z-0">
-    <SplineComponent scene={sceneUrl} />
-  </div>
-);
+const SplineWrapper = ({ sceneUrl }: { sceneUrl: string }) => {
+  const ref = React.useRef<HTMLCanvasElement>(null);
+  
+  React.useEffect(() => {
+    if (!ref.current) return;
+    
+    let spline: import('@splinetool/runtime').Application | null = null;
+    const loadSpline = async () => {
+      const canvas = ref.current;
+      if (!canvas) return;
+      
+      spline = new Application(canvas);
+      await spline.load(sceneUrl);
+    };
+    
+    loadSpline();
+    
+    return () => {
+      if (spline) {
+        spline.dispose();
+      }
+    };
+  }, [sceneUrl]);
+  
+  return (
+    <div className="absolute inset-0 z-0">
+      <canvas ref={ref} style={{ width: '100%', height: '100%' }} />
+    </div>
+  );
+};
 
 const HeroSection = () => {
   return (
