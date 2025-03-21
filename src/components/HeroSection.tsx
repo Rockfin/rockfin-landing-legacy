@@ -2,46 +2,16 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Application } from '@splinetool/runtime';
 import React from 'react';
-
-// Simple wrapper to handle the Spline component
-const SplineWrapper = ({ sceneUrl }: { sceneUrl: string }) => {
-  const ref = React.useRef<HTMLCanvasElement>(null);
-  
-  React.useEffect(() => {
-    if (!ref.current) return;
-    
-    let spline: import('@splinetool/runtime').Application | null = null;
-    const loadSpline = async () => {
-      const canvas = ref.current;
-      if (!canvas) return;
-      
-      spline = new Application(canvas);
-      await spline.load(sceneUrl);
-    };
-    
-    loadSpline();
-    
-    return () => {
-      if (spline) {
-        spline.dispose();
-      }
-    };
-  }, [sceneUrl]);
-  
-  return (
-    <div className="absolute inset-0 z-0">
-      <canvas ref={ref} style={{ width: '100%', height: '100%' }} />
-    </div>
-  );
-};
+import SplineWrapper from './SplineWrapper';
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Spline Background */}
-      <SplineWrapper sceneUrl="https://prod.spline.design/eNgMV8ubeYFtIbiB/scene.splinecode" />
+      <div className="absolute inset-0 z-0">
+        <SplineWrapper sceneUrl="https://prod.spline.design/eNgMV8ubeYFtIbiB/scene.splinecode" />
+      </div>
       
       {/* Semi-transparent overlay for better text visibility */}
       <div className="absolute inset-0 bg-black/40 z-[1]"></div>

@@ -8,7 +8,7 @@ import { GovernmentContractingSection } from "@/components/GovernmentContracting
 import { AIInnovationSection } from "@/components/BlockchainInnovationSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import SplineWrapper from "@/components/SplineWrapper";
+import SplineWrapper from "../components/SplineWrapper";
 
 export default function Home() {
   return (
@@ -18,6 +18,8 @@ export default function Home() {
       <main>
         <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
           <HeroSection />
+          
+          {/* Interactive 3D Spline Scene */}
           <div style={{ width: '100vw', height: '100vh' }}>
             <SplineWrapper sceneUrl="https://prod.spline.design/Nl5oejRR2NptS4Vp/scene.splinecode" />
           </div>
