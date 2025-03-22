@@ -20,7 +20,7 @@ export default function Home() {
           <HeroSection />
           
           {/* Interactive 3D Spline Scene */}
-          <div style={{ width: '100vw', height: '100vh' }}>
+          <div className="w-full h-screen">
             <SplineWrapper sceneUrl="https://prod.spline.design/Nl5oejRR2NptS4Vp/scene.splinecode" />
           </div>
           <ServicesSection />
