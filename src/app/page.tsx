@@ -12,17 +12,21 @@ import SplineWrapper from "../components/SplineWrapper";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-black dark:bg-black">
       <Navbar />
       
       <main>
         <Suspense fallback={<div className="h-screen flex items-center justify-center">Loading...</div>}>
-          <HeroSection />
+          {/* Hero Section with fixed height to prevent overlap */}
+          <section className="h-screen">
+            <HeroSection />
+          </section>
           
-          {/* Interactive 3D Spline Scene */}
-          <div className="w-full h-screen">
-            <SplineWrapper sceneUrl="https://prod.spline.design/Nl5oejRR2NptS4Vp/scene.splinecode" />
-          </div>
+          {/* Interactive 3D Spline Scene with its own section */}
+          <section className="w-full h-screen bg-black">
+            <SplineWrapper sceneUrl="https://prod.spline.design/fpDO8D8sbdqMMN4w/scene.splinecode" />
+          </section>
+          
           <ServicesSection />
           <GovernmentContractingSection />
           <AIInnovationSection />

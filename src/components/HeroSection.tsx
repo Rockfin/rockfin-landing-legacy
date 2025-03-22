@@ -8,9 +8,12 @@ import SplineWrapper from './SplineWrapper';
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Spline Background */}
-      <div className="absolute inset-0 z-0">
-        <SplineWrapper sceneUrl="https://prod.spline.design/eNgMV8ubeYFtIbiB/scene.splinecode" />
+      {/* Spline Background - Ensure it fills the entire section */}
+      <div className="absolute inset-0 z-0 w-full h-full">
+        <SplineWrapper 
+          sceneUrl="https://prod.spline.design/eNgMV8ubeYFtIbiB/scene.splinecode" 
+          className="w-full h-full"
+        />
       </div>
       
       {/* Semi-transparent overlay for better text visibility */}
