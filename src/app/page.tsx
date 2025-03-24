@@ -23,9 +23,9 @@ export default function Home() {
           </section>
           
           {/* Interactive 3D Spline Scene with its own section */}
-          <section className="w-full h-screen bg-black">
+          {/* <section className="w-full h-screen bg-black">
             <SplineWrapper sceneUrl="https://prod.spline.design/fpDO8D8sbdqMMN4w/scene.splinecode" />
-          </section>
+          </section> */}
           
           <ServicesSection />
           <GovernmentContractingSection />
