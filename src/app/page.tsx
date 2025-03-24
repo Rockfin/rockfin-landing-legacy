@@ -8,7 +8,7 @@ import { GovernmentContractingSection } from "@/components/GovernmentContracting
 import { AIInnovationSection } from "@/components/BlockchainInnovationSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import SplineWrapper from "../components/SplineWrapper";
+// import SplineWrapper from "../components/SplineWrapper";
 
 export default function Home() {
   return (
