@@ -19,8 +19,15 @@ const HeroSection = () => {
       {/* Semi-transparent overlay for better text visibility */}
       <div className="absolute inset-0 bg-black/40 z-[1]"></div>
 
-      <div className="container mx-auto px-4 z-10 py-20 flex flex-col items-center text-center">
-        <div className="max-w-4xl">
+      <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
+        {/* Added background, padding, rounding and blur to this inner div */}
+        <div
+          className="max-w-4xl bg-black/20 backdrop-blur-[2px] py-8 px-6" // Removed rounded-lg
+          style={{
+            maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 90%)', // Smoother fade: starts earlier, wider transition
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 90%)' // For Safari compatibility
+          }}
+        >
           <motion.h1 
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
             style={{ fontFamily: "var(--font-quicksand), sans-serif" }}
@@ -28,11 +35,12 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Interstellar Intelligence for Your IT Solutions.
+            Innovating Where No Code Has Gone Before.
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-white/90 mb-8 font-quicksand"
+            className="text-xl md:text-2xl text-white/90 mb-8" // Removed font-quicksand class
+            style={{ fontFamily: "var(--font-quicksand), sans-serif" }} // Added inline style
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
