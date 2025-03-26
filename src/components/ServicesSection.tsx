@@ -59,7 +59,7 @@ const ServiceCard = ({ service }: { service: ServiceProps }) => {
   return (
     <>
       <motion.div
-        className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-gray-800 dark:bg-gray-900"
+        className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-gray-700 dark:bg-[#080808]"
         whileHover={{ y: -5 }}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -67,12 +67,12 @@ const ServiceCard = ({ service }: { service: ServiceProps }) => {
         transition={{ duration: 0.5 }}
       >
         <div className="space-y-4">
-          <div className="text-secondary dark:text-secondary">{service.icon}</div>
+          <div className="text-gray-500 dark:text-gray-400">{service.icon}</div>
           <h3 className="text-xl font-bold">{service.title}</h3>
           <p className="text-gray-600 dark:text-gray-400">{service.description}</p>
           <Button
             variant="link"
-            className="p-0 text-secondary hover:text-secondary/80 dark:text-secondary dark:hover:text-secondary/80 flex items-center"
+            className="p-0 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 flex items-center"
             onClick={() => setOpen(true)}
           >
             Learn More
@@ -81,14 +81,14 @@ const ServiceCard = ({ service }: { service: ServiceProps }) => {
             </svg>
           </Button>
         </div>
-        <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-primary/[.03]" />
+        <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-gray-500/[.05] dark:group-hover:bg-gray-300/[.05]" />
       </motion.div>
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
-              <span className="text-secondary">{service.icon}</span>
+              <span className="text-gray-500 dark:text-gray-400">{service.icon}</span>
               <span>{service.title}</span>
             </DialogTitle>
             <DialogDescription>
@@ -108,7 +108,7 @@ const ServiceCard = ({ service }: { service: ServiceProps }) => {
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-16 px-4 md:px-6 lg:px-8 bg-neutral-light dark:bg-primary/10">
+    <section id="services" className="py-16 px-4 md:px-6 lg:px-8 bg-white dark:bg-[#080808]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -117,7 +117,7 @@ export function ServicesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-primary dark:text-white sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
             Our Services
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">

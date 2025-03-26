@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <motion.header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 dark:bg-primary/90 backdrop-blur-sm shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-background/90 dark:bg-[#080808] backdrop-blur-sm shadow-md py-4' : 'bg-transparent py-4'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -34,21 +34,15 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          {['Government Contracting', 'Blockchain', 'About', 'Contact'].map((item) => (
+          {[{ name: 'Government Contracting', href: '/government-contracting' }, { name: 'Blockchain', href: '/blockchain' }, { name: 'Generative Intelligence', href: '/generative-intelligence' }, { name: 'Contact', href: '#contact' }].map((item) => (
             <Link
-              key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+              key={item.name}
+              href={item.href}
               className="font-medium text-neutral-dark dark:text-white hover:text-secondary dark:hover:text-accent transition-colors"
             >
-              {item}
+              {item.name}
             </Link>
           ))}
-          <Link
-            href="#consultation"
-            className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-md font-medium transition-colors"
-          >
-            Schedule Consultation
-          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -71,30 +65,23 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div
-          className="md:hidden bg-white dark:bg-primary shadow-lg"
+          className="md:hidden bg-background dark:bg-primary shadow-lg"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {['Government Contracting', 'Blockchain', 'About', 'Contact'].map((item) => (
+            {[{ name: 'Government Contracting', href: '/government-contracting' }, { name: 'Blockchain', href: '/blockchain' }, { name: 'Generative Intelligence', href: '/generative-intelligence' }, { name: 'Contact', href: '#contact' }].map((item) => (
               <Link
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                key={item.name}
+                href={item.href}
                 className="font-medium text-neutral-dark dark:text-white hover:text-secondary dark:hover:text-accent transition-colors py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {item}
+                {item.name}
               </Link>
             ))}
-            <Link
-              href="#consultation"
-              className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-md font-medium transition-colors text-center"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Schedule Consultation
-            </Link>
           </div>
         </motion.div>
       )}
