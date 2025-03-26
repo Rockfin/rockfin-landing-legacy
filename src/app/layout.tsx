@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import { Montserrat, Inter, Quicksand } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -13,6 +13,13 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+});
+
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"], // Adjust weights as needed
 });
 
 export const metadata: Metadata = {
@@ -48,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${inter.variable} antialiased`}
+        className={`${montserrat.variable} ${inter.variable} ${quicksand.variable} antialiased`}
       >
         {children}
       </body>

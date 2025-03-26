@@ -19,19 +19,19 @@ const HeroSection = () => {
       {/* Semi-transparent overlay for better text visibility */}
       <div className="absolute inset-0 bg-black/40 z-[1]"></div>
 
-      <div className="container mx-auto px-4 z-10 py-20">
+      <div className="container mx-auto px-4 z-10 py-20 flex flex-col items-center text-center">
         <div className="max-w-4xl">
           <motion.h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-quicksand font-bold text-white mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Driving AI Innovation in Government Contracting
+            Interstellar Intelligence for Your IT Solutions.
           </motion.h1>
           
           <motion.p
-            className="text-xl md:text-2xl text-white/90 mb-8 font-body"
+            className="text-xl md:text-2xl text-white/90 mb-8 font-quicksand"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -40,7 +40,7 @@ const HeroSection = () => {
           </motion.p>
           
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 mt-8"
+            className="flex flex-col sm:flex-row gap-4 mt-8 justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
