@@ -8,8 +8,7 @@ export function AboutUsSection() {
           About Us
         </h2>
         <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Learn more about Rockfin LLC, our mission, vision, and the team driving innovation.
-          {/* Placeholder for actual About Us content */}
+          Rockfin comprises a dedicated team of engineers with distinguished backgrounds in the military and intelligence sectors. Our core mission is to strategically leverage cutting-edge advancements in Artificial Intelligence and Blockchain technology. We are committed to ensuring these powerful innovations are ethically deployed to foster positive global impact and contribute to the betterment of humanity.
         </p>
         {/* Example: Add team photos, mission statement, etc. here */}
       </div>

@@ -75,6 +75,7 @@ export function ContactSection() {
             transition={{ duration: 0.5 }}
             className="bg-white dark:bg-[#080808] rounded-lg p-6 md:p-8 border border-gray-200 dark:border-gray-700"
           >
+            <h3 className="text-xl font-semibold mb-4 text-black dark:text-white">Contact Form</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
@@ -246,7 +247,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-md font-medium text-black dark:text-white">Phone</h4>
-                    <p className="text-gray-600 dark:text-gray-300">(555) 123-4567</p>
+                    <p className="text-gray-600 dark:text-gray-300">(202) 251 7695</p>
                   </div>
                 </div>
                 
