@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // sans: ['var(--font-inter)'], // Temporarily commented out
-        // montserrat: ['var(--font-montserrat)'], // Temporarily commented out
-        quicksand: ['var(--font-quicksand)'], // Add Quicksand here
+        sans: ['var(--font-inter)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        quicksand: ['var(--font-quicksand)', 'sans-serif'],
       },
       colors: {
         primary: '#0A2342',      // Deep navy blue
