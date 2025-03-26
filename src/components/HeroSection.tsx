@@ -29,7 +29,7 @@ const HeroSection = () => {
           }}
         >
           <motion.h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-text-wave"
             style={{ fontFamily: "var(--font-quicksand), sans-serif" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Rockfin LLC delivers enterprise-grade AI infrastructure, strategic technology investments, and secure data-driven solutions.
+            Rockfin delivers enterprise-grade AI infrastructure, strategic technology investments, and secure data-driven solutions.
           </motion.p>
           
           <motion.div

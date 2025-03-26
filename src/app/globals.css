@@ -67,6 +67,11 @@ h1, h2, h3, h4, h5, h6 {
   to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes textWave {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
 /* Utility Classes */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-in-out;
@@ -74,6 +79,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-slide-up {
   animation: slideUp 0.5s ease-in-out;
+}
+
+.animate-text-wave {
+  background-image: linear-gradient(to right, #fff 20%, #888 50%, #fff 80%); /* Increased contrast */
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Make the original text color transparent */
+  animation: textWave 6s linear infinite; /* Adjust duration as needed - Increased to 6s */
 }
 
 /* Gradient Backgrounds */

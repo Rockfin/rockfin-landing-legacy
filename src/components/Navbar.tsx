@@ -34,7 +34,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          {['Government Contracting', 'Technology', 'About', 'Contact'].map((item) => (
+          {['Government Contracting', 'Blockchain', 'About', 'Contact'].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
@@ -78,7 +78,7 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {['Government Contracting', 'Technology', 'About', 'Contact'].map((item) => (
+            {['Government Contracting', 'Blockchain', 'About', 'Contact'].map((item) => (
               <Link
                 key={item}
                 href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
