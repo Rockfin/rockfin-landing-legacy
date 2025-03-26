@@ -34,7 +34,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          {[{ name: 'Government Contracting', href: '/government-contracting' }, { name: 'Blockchain', href: '/blockchain' }, { name: 'Generative Intelligence', href: '/generative-intelligence' }, { name: 'Contact', href: '#contact' }].map((item) => (
+          {[{ name: 'Services', href: '#services' }, { name: 'Credentials', href: '#government-contracting' }, { name: 'About Us', href: '#about-us' }, { name: 'Contact', href: '#contact' }].map((item) => (
             <Link
               key={item.name}
               href={item.href}
@@ -72,7 +72,7 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {[{ name: 'Government Contracting', href: '/government-contracting' }, { name: 'Blockchain', href: '/blockchain' }, { name: 'Generative Intelligence', href: '/generative-intelligence' }, { name: 'Contact', href: '#contact' }].map((item) => (
+            {[{ name: 'Services', href: '#services' }, { name: 'Credentials', href: '#government-contracting' }, { name: 'About Us', href: '#about-us' }, { name: 'Contact', href: '#contact' }].map((item) => (
               <Link
                 key={item.name}
                 href={item.href}

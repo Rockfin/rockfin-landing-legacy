@@ -4,7 +4,9 @@ import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import { ContactSection } from "@/components/ContactSection";
-import { ServicesSection } from "@/components/ServicesSection"; // Import ServicesSection
+import { ServicesSection } from "@/components/ServicesSection";
+import { GovernmentContractingSection } from "@/components/GovernmentContractingSection";
+import { AboutUsSection } from "@/components/AboutUsSection"; // Import AboutUsSection
 import { Footer } from "@/components/Footer";
 // import SplineWrapper from "../components/SplineWrapper";
 
@@ -20,8 +22,14 @@ export default function Home() {
             <HeroSection />
           </section>
 
-          {/* Add Services Section */}
+          {/* Services Section */}
           <ServicesSection />
+
+          {/* Government Contracting Section */}
+          <GovernmentContractingSection />
+
+          {/* About Us Section */}
+          <AboutUsSection />
           
           {/* Interactive 3D Spline Scene with its own section */}
           {/* <section className="w-full h-screen bg-black">

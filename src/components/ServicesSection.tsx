@@ -22,13 +22,13 @@ interface ServiceProps {
 const services: ServiceProps[] = [
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-10 w-10">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-10 w-10">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9.75l-9-5.25M21 7.5v9l-9 5.25" />
       </svg>
     ),
-    title: "AI Model Development",
-    description: "Develop custom AI models tailored to your specific business needs.",
-    details: "Our AI Model Development services provide end-to-end solutions for businesses looking to leverage artificial intelligence. We offer custom model development, training, and deployment for a variety of applications, including predictive analytics, natural language processing, computer vision, and more. Our team of experts ensures your AI models are accurate, efficient, and optimized for performance. We specialize in TensorFlow, PyTorch, and other leading AI frameworks."
+    title: "Government Intelligence and Logistics",
+    description: "Providing advanced intelligence and logistics solutions for government agencies.",
+    details: "Our Government Intelligence and Logistics services offer cutting-edge solutions tailored for the unique demands of government operations. We leverage AI and data analytics to enhance situational awareness, optimize supply chains, and improve decision-making processes. Our expertise ensures secure, reliable, and efficient support for critical missions."
   },
   {
     icon: (
@@ -36,9 +36,9 @@ const services: ServiceProps[] = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
       </svg>
     ),
-    title: "Data Analysis & Insights",
-    description: "Extract valuable insights from your data using advanced analytics and machine learning.",
-    details: "Our Data Analysis & Insights services help you unlock the potential of your data. We provide data mining, statistical analysis, predictive modeling, and data visualization services. Our team uses advanced techniques to identify trends, patterns, and anomalies in your data, providing you with actionable insights to improve decision-making and drive business growth. We work with structured and unstructured data from various sources."
+    title: "Generative Intelligence",
+    description: "Building innovative applications and defending against adversarial AI.",
+    details: "We specialize in developing cutting-edge applications powered by Generative Intelligence. Our expertise extends to creating robust defenses against adversarial AI attacks, employing advanced techniques to anticipate and neutralize threats, effectively applying reverse psychology to AI security challenges."
   },
   {
     icon: (
@@ -121,7 +121,7 @@ export function ServicesSection() {
             Our Services
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Leveraging AI and machine learning to transform businesses and create new opportunities in the digital economy.
+            Generative Intelligence is our creative compass, lighting the path to a future where innovation and compassion converge.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
