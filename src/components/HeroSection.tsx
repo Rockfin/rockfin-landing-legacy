@@ -16,9 +16,6 @@ const HeroSection = () => {
         />
       </div>
       
-      {/* Semi-transparent overlay for better text visibility */}
-      <div className="absolute inset-0 bg-black/40 z-[1]"></div>
-
       <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
         {/* Added background, padding, rounding and blur to this inner div */}
         <div
