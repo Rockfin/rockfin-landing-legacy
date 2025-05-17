@@ -19,10 +19,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 z-10 flex flex-col items-center text-center">
         {/* Added background, padding, rounding and blur to this inner div */}
         <div
-          className="max-w-4xl backdrop-blur-[2px] py-8 px-6"
+          className="max-w-4xl bg-black/20 backdrop-blur-[2px] py-8 px-6" // Removed rounded-lg
           style={{
-            maskImage: 'radial-gradient(ellipse at center, black 20%, transparent 40%)', // Quick fade to keep blur tight
-            WebkitMaskImage: 'radial-gradient(ellipse at center, black 20%, transparent 40%)'
+            maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 90%)', // Smoother fade: starts earlier, wider transition
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 90%)' // For Safari compatibility
           }}
         >
           <motion.h1 
